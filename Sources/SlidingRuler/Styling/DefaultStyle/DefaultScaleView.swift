@@ -29,7 +29,7 @@
 
 import SwiftUI
 
-struct DefaultScaleView: ScaleView {
+public struct DefaultScaleView: ScaleView {
     struct ScaleShape: Shape {
         fileprivate var unitMarkSize: CGSize { .init(width: 3.0, height: 27.0)}
         fileprivate var halfMarkSize: CGSize { .init(width: UIScreen.main.scale == 3 ? 1.8 : 2.0, height: 19.0) }
@@ -69,7 +69,7 @@ struct DefaultScaleView: ScaleView {
     var halfMarkWidth: CGFloat { shape.halfMarkSize.width }
     var fractionMarkWidth: CGFloat { shape.fractionMarkSize.width }
 
-    init(width: CGFloat, height: CGFloat = 30) {
+    public init(width: CGFloat, height: CGFloat = 30) {
         self.width = width
         self.height = height
     }
